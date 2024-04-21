@@ -13,18 +13,7 @@
     
 
     
-        <meta name="description" content="三、MyBatis实践：提高持久层数据处理效率目录
-一、Mybatis简介
-1.1 简介
-1.2 持久层框架对比
-1.3 快速入门（基于Mybatis3方式）
-
-
-二、MyBatis基本使用
-2.1 向SQL语句传参
-2.1.1 mybatis日志输出配置
-2.1.2 #{}形式
-2.1.3 ${}"/>
+        <meta name="description" content="三、MyBatis实践：提高持久层数据处理效率一、Mybatis简介1.1 简介MyBatis最初是Apache的一个开源项目iBatis, 2010年6月这个项目由Apache Software Foundation迁移到了Google Code。随着开发团队转投Google Code旗下， iB"/>
     
 
     <!--Author-->
@@ -39,18 +28,7 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="三、MyBatis实践：提高持久层数据处理效率目录
-一、Mybatis简介
-1.1 简介
-1.2 持久层框架对比
-1.3 快速入门（基于Mybatis3方式）
-
-
-二、MyBatis基本使用
-2.1 向SQL语句传参
-2.1.1 mybatis日志输出配置
-2.1.2 #{}形式
-2.1.3 ${}"/>
+        <meta property="og:description" content="三、MyBatis实践：提高持久层数据处理效率一、Mybatis简介1.1 简介MyBatis最初是Apache的一个开源项目iBatis, 2010年6月这个项目由Apache Software Foundation迁移到了Google Code。随着开发团队转投Google Code旗下， iB"/>
     
 
     <!--Open Graph Site Name-->
@@ -238,85 +216,8 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="三、MyBatis实践：提高持久层数据处理效率"><a href="#三、MyBatis实践：提高持久层数据处理效率" class="headerlink" title="三、MyBatis实践：提高持久层数据处理效率"></a>三、MyBatis实践：提高持久层数据处理效率</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#%E4%B8%80Mybatis%E7%AE%80%E4%BB%8B">一、Mybatis简介</a><ul>
-<li><a href="#11-%E7%AE%80%E4%BB%8B">1.1 简介</a></li>
-<li><a href="#12-%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94">1.2 持久层框架对比</a></li>
-<li><a href="#13-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9F%BA%E4%BA%8EMybatis3%E6%96%B9%E5%BC%8F">1.3 快速入门（基于Mybatis3方式）</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BA%8CMyBatis%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">二、MyBatis基本使用</a><ul>
-<li><a href="#21-%E5%90%91SQL%E8%AF%AD%E5%8F%A5%E4%BC%A0%E5%8F%82">2.1 向SQL语句传参</a><ul>
-<li><a href="#211-mybatis%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E9%85%8D%E7%BD%AE">2.1.1 mybatis日志输出配置</a></li>
-<li><a href="#212-%E5%BD%A2%E5%BC%8F">2.1.2 #{}形式</a></li>
-<li><a href="#213-%E5%BD%A2%E5%BC%8F">2.1.3 ${}形式</a></li>
-</ul>
-</li>
-<li><a href="#22-%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5">2.2 数据输入</a><ul>
-<li><a href="#221-Mybatis%E6%80%BB%E4%BD%93%E6%9C%BA%E5%88%B6%E6%A6%82%E6%8B%AC">2.2.1 Mybatis总体机制概括</a></li>
-<li><a href="#222-%E6%A6%82%E5%BF%B5%E8%AF%B4%E6%98%8E">2.2.2 概念说明</a></li>
-<li><a href="#223-%E5%8D%95%E4%B8%AA%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0">2.2.3 单个简单类型参数</a></li>
-<li><a href="#224-%E5%AE%9E%E4%BD%93%E7%B1%BB%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0">2.2.4 实体类类型参数</a></li>
-<li><a href="#225-%E9%9B%B6%E6%95%A3%E7%9A%84%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE">2.2.5 零散的简单类型数据</a></li>
-<li><a href="#226-Map%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0">2.2.6 Map类型参数</a></li>
-</ul>
-</li>
-<li><a href="#23%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA">2.3数据输出</a><ul>
-<li><a href="#231-%E8%BE%93%E5%87%BA%E6%A6%82%E8%BF%B0">2.3.1 输出概述</a></li>
-<li><a href="#232-%E5%8D%95%E4%B8%AA%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B">2.3.2 单个简单类型</a></li>
-<li><a href="#233-%E8%BF%94%E5%9B%9E%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%AF%B9%E8%B1%A1">2.3.3 返回实体类对象</a></li>
-<li><a href="#234-%E8%BF%94%E5%9B%9EMap%E7%B1%BB%E5%9E%8B">2.3.4 返回Map类型</a></li>
-<li><a href="#235-%E8%BF%94%E5%9B%9EList%E7%B1%BB%E5%9E%8B">2.3.5 返回List类型</a></li>
-<li><a href="#236-%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%94%AE%E5%80%BC">2.3.6 返回主键值</a></li>
-<li><a href="#237-%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%B1%9E%E6%80%A7%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB">2.3.7 实体类属性和数据库字段对应关系</a></li>
-</ul>
-</li>
-<li><a href="#24-CRUD%E5%BC%BA%E5%8C%96%E7%BB%83%E4%B9%A0">2.4 CRUD强化练习</a></li>
-<li><a href="#25-mapperXML%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93">2.5 mapperXML标签总结</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89MyBatis%E5%A4%9A%E8%A1%A8%E6%98%A0%E5%B0%84">三、MyBatis多表映射</a><ul>
-<li><a href="#31-%E5%A4%9A%E8%A1%A8%E6%98%A0%E5%B0%84%E6%A6%82%E5%BF%B5">3.1 多表映射概念</a></li>
-<li><a href="#32-%E5%AF%B9%E4%B8%80%E6%98%A0%E5%B0%84">3.2 对一映射</a></li>
-<li><a href="#33-%E5%AF%B9%E5%A4%9A%E6%98%A0%E5%B0%84">3.3 对多映射</a></li>
-<li><a href="#34-%E5%A4%9A%E8%A1%A8%E6%98%A0%E5%B0%84%E6%80%BB%E7%BB%93">3.4 多表映射总结</a><ul>
-<li><a href="#341-%E5%A4%9A%E8%A1%A8%E6%98%A0%E5%B0%84%E4%BC%98%E5%8C%96">3.4.1 多表映射优化</a></li>
-<li><a href="#342-%E5%A4%9A%E8%A1%A8%E6%98%A0%E5%B0%84%E6%80%BB%E7%BB%93">3.4.2 多表映射总结</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%9B%9BMyBatis%E5%8A%A8%E6%80%81%E8%AF%AD%E5%8F%A5">四、MyBatis动态语句</a><ul>
-<li><a href="#41-%E5%8A%A8%E6%80%81%E8%AF%AD%E5%8F%A5%E9%9C%80%E6%B1%82%E5%92%8C%E7%AE%80%E4%BB%8B">4.1 动态语句需求和简介</a></li>
-<li><a href="#42-if%E5%92%8Cwhere%E6%A0%87%E7%AD%BE">4.2 if和where标签</a></li>
-<li><a href="#43-set%E6%A0%87%E7%AD%BE">4.3 set标签</a></li>
-<li><a href="#44-trim%E6%A0%87%E7%AD%BE%E4%BA%86%E8%A7%A3">4.4 trim标签(了解)</a></li>
-<li><a href="#45-choosewhenotherwise%E6%A0%87%E7%AD%BE">4.5 choose&#x2F;when&#x2F;otherwise标签</a></li>
-<li><a href="#46-foreach%E6%A0%87%E7%AD%BE">4.6 foreach标签</a></li>
-<li><a href="#47-sql%E7%89%87%E6%AE%B5">4.7 sql片段</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BA%94MyBatis%E9%AB%98%E7%BA%A7%E6%89%A9%E5%B1%95">五、MyBatis高级扩展</a><ul>
-<li><a href="#51-Mapper%E6%89%B9%E9%87%8F%E6%98%A0%E5%B0%84%E4%BC%98%E5%8C%96">5.1 Mapper批量映射优化</a></li>
-<li><a href="#52-%E6%8F%92%E4%BB%B6%E5%92%8C%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6PageHelper">5.2 插件和分页插件PageHelper</a><ul>
-<li><a href="#521-%E6%8F%92%E4%BB%B6%E6%9C%BA%E5%88%B6%E5%92%8CPageHelper%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D">5.2.1 插件机制和PageHelper插件介绍</a></li>
-<li><a href="#522-PageHelper%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8">5.2.2 PageHelper插件使用</a></li>
-</ul>
-</li>
-<li><a href="#53-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%92%8CMybatisX%E6%8F%92%E4%BB%B6">5.3 逆向工程和MybatisX插件</a><ul>
-<li><a href="#531-ORM%E6%80%9D%E7%BB%B4%E4%BB%8B%E7%BB%8D">5.3.1 ORM思维介绍</a></li>
-<li><a href="#532-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B">5.3.2 逆向工程</a></li>
-<li><a href="#533-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E6%8F%92%E4%BB%B6MyBatisX%E4%BD%BF%E7%94%A8">5.3.3 逆向工程插件MyBatisX使用</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%85%ADMyBatis%E6%80%BB%E7%BB%93">六、MyBatis总结</a></li>
-</ul>
-<h2 id="一、Mybatis简介"><a href="#一、Mybatis简介" class="headerlink" title="一、Mybatis简介"></a>一、Mybatis简介</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p><a target="_blank" rel="noopener" href="https://mybatis.org/mybatis-3/zh/index.html">https://mybatis.org/mybatis-3/zh/index.html</a></p>
-<p>MyBatis最初是Apache的一个开源项目iBatis, 2010年6月这个项目由Apache Software Foundation迁移到了Google Code。随着开发团队转投Google Code旗下， iBatis3.x正式更名为MyBatis。代码于2013年11月迁移到Github。</p>
+                <h1 id="三、MyBatis实践：提高持久层数据处理效率"><a href="#三、MyBatis实践：提高持久层数据处理效率" class="headerlink" title="三、MyBatis实践：提高持久层数据处理效率"></a>三、MyBatis实践：提高持久层数据处理效率</h1><h2 id="一、Mybatis简介"><a href="#一、Mybatis简介" class="headerlink" title="一、Mybatis简介"></a>一、Mybatis简介</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p>MyBatis最初是Apache的一个开源项目iBatis, 2010年6月这个项目由Apache Software Foundation迁移到了Google Code。随着开发团队转投Google Code旗下， iBatis3.x正式更名为MyBatis。代码于2013年11月迁移到Github。</p>
 <p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
-<p><img src="/image/image_beA-9rcg2C.png"></p>
 <blockquote>
 <p>社区会持续更新开源项目，版本会不断变化，我们不必每个小版本都追，关注重大更新的大版本升级即可。</p>
 </blockquote>
@@ -352,7 +253,6 @@
 <li><p>项目搭建和准备</p>
 <ol>
 <li><p>项目搭建</p>
-<p><img src="/image/image_ABKtnvaSLe.png"></p>
 </li>
 <li><p>依赖导入</p>
 <p>pom.xml</p>
@@ -368,7 +268,6 @@
 <p>如果拿它跟具有相同功能的 JDBC 代码进行对比，你会立即发现省掉了将近 95% 的代码！！</p>
 <p>一般编写SQL语句的文件命名：XxxMapper.xml  Xxx一般取表名！！</p>
 <p>Mybatis 中的 Mapper 接口相当于以前的 Dao。但是区别在于，Mapper 仅仅只是建接口即可，我们不需要提供实现类，具体的SQL写到对应的Mapper文件，该用法的思路如下图所示：</p>
-<p><img src="/image/image_pikdpXSaNV.png"></p>
 <ol>
 <li><p>定义mapper接口</p>
 <p>包：com.atguigu.mapper</p>
@@ -410,7 +309,7 @@
 </ul>
 </li>
 <li>SqlSession：不依赖Web服务器，属于持久化层。<ul>
-<li>代表Java程序和数据库之间的会话。<br><img src="/image/image_nCsKIKFBM7.png"></li>
+<li>代表Java程序和数据库之间的会话。</li>
 </ul>
 </li>
 </ul>
@@ -455,16 +354,13 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- SLF4J 选择slf4j输出！ --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">&quot;logImpl&quot;</span> <span class="attr">value</span>=<span class="string">&quot;SLF4J&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="2-1-2-形式"><a href="#2-1-2-形式" class="headerlink" title="2.1.2 #{}形式"></a>2.1.2 <strong>#{}形式</strong></h4><p>Mybatis会将SQL语句中的#{}转换为问号占位符。</p>
-<p><img src="/image/image_Sd6pCEE6Oi.png"></p>
 <h4 id="2-1-3-形式"><a href="#2-1-3-形式" class="headerlink" title="2.1.3 ${}形式"></a>2.1.3 <strong>${}形式</strong></h4><p>${}形式传参，底层Mybatis做的是字符串拼接操作。</p>
-<p><img src="/image/image_KYrG3XT73t.png"></p>
 <p>通常不会采用${}的方式传值。一个特定的适用场景是：通过Java程序动态生成数据库表，表名部分需要Java程序通过参数传入；而JDBC对于表名部分是不能使用问号占位符的，此时只能使用</p>
 <p>结论：实际开发中，能用#{}实现的，肯定不用${}。</p>
 <p>特殊情况： 动态的不是值，是列名或者关键字，需要使用${}拼接</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注解方式传入参数！！</span></span><br><span class="line"><span class="meta">@Select(&quot;select * from user where $&#123;column&#125; = #&#123;value&#125;&quot;)</span></span><br><span class="line">User <span class="title function_">findByColumn</span><span class="params">(<span class="meta">@Param(&quot;column&quot;)</span> String column, </span></span><br><span class="line"><span class="params">                                <span class="meta">@Param(&quot;value&quot;)</span> String value)</span>;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-2-数据输入"><a href="#2-2-数据输入" class="headerlink" title="2.2 数据输入"></a>2.2 数据输入</h3><h4 id="2-2-1-Mybatis总体机制概括"><a href="#2-2-1-Mybatis总体机制概括" class="headerlink" title="2.2.1 Mybatis总体机制概括"></a>2.2.1 <strong>Mybatis总体机制概括</strong></h4><p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img005.ebd8c6a3.png"></p>
-<h4 id="2-2-2-概念说明"><a href="#2-2-2-概念说明" class="headerlink" title="2.2.2 概念说明"></a>2.2.2 <strong>概念说明</strong></h4><p>这里数据输入具体是指上层方法（例如Service方法）调用Mapper接口时，数据传入的形式。</p>
+<h3 id="2-2-数据输入"><a href="#2-2-数据输入" class="headerlink" title="2.2 数据输入"></a>2.2 数据输入</h3><h4 id="2-2-1-Mybatis总体机制概括"><a href="#2-2-1-Mybatis总体机制概括" class="headerlink" title="2.2.1 Mybatis总体机制概括"></a>2.2.1 <strong>Mybatis总体机制概括</strong></h4><h4 id="2-2-2-概念说明"><a href="#2-2-2-概念说明" class="headerlink" title="2.2.2 概念说明"></a>2.2.2 <strong>概念说明</strong></h4><p>这里数据输入具体是指上层方法（例如Service方法）调用Mapper接口时，数据传入的形式。</p>
 <ul>
 <li>简单类型：只包含一个值的数据类型<ul>
 <li>基本数据类型：int、byte、short、double、……</li>
@@ -496,11 +392,9 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertEmployee&quot;</span>&gt;</span></span><br><span class="line">  insert into t_emp(emp_name,emp_salary) values(#&#123;empName&#125;,#&#123;empSalary&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>对应关系</p>
-<p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img006.f9958c52.png"></p>
 <p>结论</p>
 <p>Mybatis会根据#{}中传入的数据，加工成getXxx()方法，通过反射在实体类对象中调用这个方法，从而获取到对应的数据。填充到#{}解析后的问号占位符这个位置。</p>
 <h4 id="2-2-5-零散的简单类型数据"><a href="#2-2-5-零散的简单类型数据" class="headerlink" title="2.2.5 零散的简单类型数据"></a>2.2.5 <strong>零散的简单类型数据</strong></h4><p>零散的多个简单类型参数，如果没有特殊处理，那么Mybatis无法识别自定义名称：</p>
-<p><img src="/image/image_UeTV_XwcBt.png"></p>
 <p>Mapper接口中抽象方法的声明</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">updateEmployee</span><span class="params">(<span class="meta">@Param(&quot;empId&quot;)</span> Integer empId,<span class="meta">@Param(&quot;empSalary&quot;)</span> Double empSalary)</span>;</span><br></pre></td></tr></table></figure>
 
@@ -508,7 +402,6 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateEmployee&quot;</span>&gt;</span></span><br><span class="line">  update t_emp set emp_salary=#&#123;empSalary&#125; where emp_id=#&#123;empId&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>对应关系</p>
-<p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img007.976da128.png"></p>
 <h4 id="2-2-6-Map类型参数"><a href="#2-2-6-Map类型参数" class="headerlink" title="2.2.6 Map类型参数"></a>2.2.6 <strong>Map类型参数</strong></h4><p>Mapper接口中抽象方法的声明</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">updateEmployeeByMap</span><span class="params">(Map&lt;String, Object&gt; paramMap)</span>;</span><br></pre></td></tr></table></figure>
 
@@ -942,7 +835,6 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 创建resultMap实现“对一”关联关系映射 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- id属性：通常设置为这个resultMap所服务的那条SQL语句的id加上“ResultMap” --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- type属性：要设置为这个resultMap所服务的那条SQL语句最终要返回的类型 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;selectOrderWithCustomerResultMap&quot;</span> <span class="attr">type</span>=<span class="string">&quot;order&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 先设置Order自身属性和字段的对应关系 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">&quot;order_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;orderId&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;order_name&quot;</span> <span class="attr">property</span>=<span class="string">&quot;orderName&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 使用association标签配置“对一”关联关系 --&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- property属性：在Order类中对一的一端进行引用时使用的属性名 --&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- javaType属性：一的一端类的全类名 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;customer&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;customer&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 配置Customer类的属性和字段名之间的对应关系 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">&quot;customer_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;customerId&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;customer_name&quot;</span> <span class="attr">property</span>=<span class="string">&quot;customerName&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">association</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Order selectOrderWithCustomer(Integer orderId); --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectOrderWithCustomer&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;selectOrderWithCustomerResultMap&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  SELECT order_id,order_name,c.customer_id,customer_name</span><br><span class="line">  FROM t_order o</span><br><span class="line">  LEFT JOIN t_customer c</span><br><span class="line">  ON o.customer_id=c.customer_id</span><br><span class="line">  WHERE o.order_id=#&#123;orderId&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>对应关系可以参考下图：</p>
-<p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img018.6c3cfc17.png"></p>
 </li>
 <li><p>Mybatis全局注册Mapper文件</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注册Mapper配置文件：告诉Mybatis我们的Mapper配置文件的位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 在mapper标签的resource属性中指定Mapper配置文件以“类路径根目录”为基准的相对路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">&quot;mappers/OrderMapper.xml&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -965,7 +857,6 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置resultMap实现从Customer到OrderList的“对多”关联关系 --&gt;</span><br><span class="line">&lt;resultMap id=<span class="string">&quot;selectCustomerWithOrderListResultMap&quot;</span></span><br><span class="line"></span><br><span class="line">  type=<span class="string">&quot;customer&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 映射Customer本身的属性 --&gt;</span><br><span class="line">  &lt;id column=<span class="string">&quot;customer_id&quot;</span> property=<span class="string">&quot;customerId&quot;</span>/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;result column=<span class="string">&quot;customer_name&quot;</span> property=<span class="string">&quot;customerName&quot;</span>/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- collection标签：映射“对多”的关联关系 --&gt;</span><br><span class="line">  &lt;!-- property属性：在Customer类中，关联“多”的一端的属性名 --&gt;</span><br><span class="line">  &lt;!-- ofType属性：集合属性中元素的类型 --&gt;</span><br><span class="line">  &lt;collection property=<span class="string">&quot;orderList&quot;</span> ofType=<span class="string">&quot;order&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 映射Order的属性 --&gt;</span><br><span class="line">    &lt;id column=<span class="string">&quot;order_id&quot;</span> property=<span class="string">&quot;orderId&quot;</span>/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;result column=<span class="string">&quot;order_name&quot;</span> property=<span class="string">&quot;orderName&quot;</span>/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/collection&gt;</span><br><span class="line"></span><br><span class="line">&lt;/resultMap&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Customer <span class="title function_">selectCustomerWithOrderList</span><span class="params">(Integer customerId)</span>; --&gt;</span><br><span class="line">&lt;select id=<span class="string">&quot;selectCustomerWithOrderList&quot;</span> resultMap=<span class="string">&quot;selectCustomerWithOrderListResultMap&quot;</span>&gt;</span><br><span class="line">  SELECT c.customer_id,c.customer_name,o.order_id,o.order_name</span><br><span class="line">  FROM t_customer c</span><br><span class="line">  LEFT JOIN t_order o</span><br><span class="line">  ON c.customer_id=o.customer_id</span><br><span class="line">  WHERE c.customer_id=#&#123;customerId&#125;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
 
 <p>对应关系可以参考下图：</p>
-<p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img019.dba418c1.png"></p>
 </li>
 <li><p>Mybatis全局注册Mapper文件</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注册Mapper配置文件：告诉Mybatis我们的Mapper配置文件的位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 在mapper标签的resource属性中指定Mapper配置文件以“类路径根目录”为基准的相对路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">&quot;mappers/OrderMapper.xml&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">&quot;mappers/CustomerMapper.xml&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1020,7 +911,6 @@
 </tr>
 </tbody></table>
 <h2 id="四、MyBatis动态语句"><a href="#四、MyBatis动态语句" class="headerlink" title="四、MyBatis动态语句"></a>四、MyBatis动态语句</h2><h3 id="4-1-动态语句需求和简介"><a href="#4-1-动态语句需求和简介" class="headerlink" title="4.1 动态语句需求和简介"></a>4.1 动态语句需求和简介</h3><p>经常遇到很多按照很多查询条件进行查询的情况，比如智联招聘的职位搜索等。其中经常出现很多条件不取值的情况，在后台应该如何完成最终的SQL语句呢？</p>
-<p><img src="/image/image_UTL-tjGuzm.png"></p>
 <p>动态 SQL 是 MyBatis 的强大特性之一。如果你使用过 JDBC 或其它类似的框架，你应该能理解根据不同条件拼接 SQL 语句有多痛苦，例如拼接时要确保不能忘记添加必要的空格，还要注意去掉列表最后一个列名的逗号。利用动态 SQL，可以彻底摆脱这种痛苦。</p>
 <p>使用动态 SQL 并非一件易事，但借助可用于任何 SQL 映射语句中的强大的动态 SQL 语言，MyBatis 显著地提升了这一特性的易用性。</p>
 <p>如果你之前用过 JSTL 或任何基于类 XML 语言的文本处理器，你对动态 SQL 元素可能会感觉似曾相识。在 MyBatis 之前的版本中，需要花时间了解大量的元素。借助功能强大的基于 OGNL 的表达式，MyBatis 3 替换了之前的大部分元素，大大精简了元素种类，现在要学习的元素种类比原来的一半还要少。</p>
@@ -1094,8 +984,6 @@
 <li><p>可以将mapperxml文件放在mapper接口所在的包！</p>
 </li>
 <li><p>可以在sources下创建mapper接口包一致的文件夹结构存放mapperxml文件</p>
-<p><img src="/image/image_ehqr6FrNXV.png"></p>
-<p><img src="/image/image_PhqgFRgNDi.png"></p>
 </li>
 </ul>
 </li>
@@ -1147,25 +1035,8 @@
 <p>在 IntelliJ IDEA 中打开插件市场，搜索 MyBatisX 并安装。</p>
 </li>
 <li><p>使用 IntelliJ IDEA连接数据库</p>
-<ul>
-<li><p>连接数据库</p>
-<p><img src="/image/image_yKs2Z2_8sQ.png"></p>
-</li>
-<li><p>填写信息</p>
-<p><img src="/image/image_bDboqlZFKD.png"></p>
-</li>
-<li><p>展示库表</p>
-<p><img src="/image/image_mCMuBhwZl2.png"></p>
-</li>
-<li><p>逆向工程使用</p>
-<p><img src="/image/image_DkwlIx_BM9.png"></p>
-<p><img src="/image/image_dJvZP76xYm.png"></p>
-<p><img src="/image/image_KXYfK5CQd-.png"></p>
-</li>
-</ul>
 </li>
 <li><p>查看生成结果</p>
-<p><img src="/image/image_IIK2v1Lk64.png"></p>
 </li>
 <li><p>逆向工程案例使用</p>
 <p>正常使用即可，自动生成单表的crud方法！</p>
